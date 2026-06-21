@@ -12,7 +12,7 @@ def handle(message):
     try:
         response = client.chat.completions.create(
             messages=[{"role": "user", "content": message.text}],
-            model="llama3-8b-8192",
+            model=llama-3.3-70b-versatile
         )
         bot.reply_to(message, response.choices[0].message.content)
     except Exception as e:
